@@ -1,0 +1,1191 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-color: #4b9f3c;
+    --second-color: #26d7ff;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+a{
+
+    text-decoration: none;
+    
+}
+.underline-link {
+    text-decoration: underline;
+    color: rgb(0, 0, 160);
+  }
+
+.underline-link:hover{
+
+    color: purple;
+}
+
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+/*****************Header***********/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.3s;
+}
+
+header.shadow .logo{
+    color: var(--text-color);
+}
+
+.nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+
+}
+
+.logo span{
+   color: var(--second-color);
+}
+
+.login{
+    padding: 8p 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.login:hover{
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text{
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.home-title{
+    font-size: 3.5rem;
+}
+
+.home-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/**************post-filter************/
+.post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem !important;
+}
+
+.filter-item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.active-filter{
+    background: var(--second-color);
+    color: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.post-box{
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-date{
+    display:flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer p{
+   font-size: 0.938rem; 
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.social .bx:hover{
+    color: var(--second-color);
+    transition: 0.3s all linear;
+}
+
+
+/******************* Post Content ************/
+.post-header{
+    width: 100%;
+    height: 500px;
+    background: var(--container-color);
+}
+
+.post-container{
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem !important;
+}
+
+.back-home{
+    color: var(--second-color);
+    font-size: 0.9rem; 
+}
+
+.header-title{
+    width: 90%;
+    font-size: 2.6rem;
+    color: var(--bg-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post-content{
+    margin-top: 10rem !important;
+}
+
+.sub-heading{
+    font-size: 1.2rem;
+}
+
+.post-text{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: auto;
+    /* row-gap: 4rem; */
+    text-align: justify;
+}
+
+.post-text p {
+    margin-bottom: 2rem; /* Adjust this value to increase or decrease the space between paragraphs */
+}
+
+
+.share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.share-title{
+    font-size: 1.1rem;
+}
+
+.post-sources{
+    margin-top: 10rem !important;
+}
+
+
+/*******************************form section**********************************/
+
+
+.form-header-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0px; /* Remove default margin */
+    padding-top: 20px; /* Add top padding */
+}
+
+.form-header-description {
+    margin-top: 20px; /* Remove default margin */
+
+    margin-bottom: 30px; /* Add bottom margin */
+}
+.name-group {
+    display: flex;
+    gap: 10px; /* Adjust the gap between first and last name as needed */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.age-group, .gender-group {
+    flex: 1;
+}
+
+
+/* Set equal width for first and last name fields */
+.name-group .form-group {
+    flex: 1;
+    
+}
+
+/* Adjust the individual input fields */
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 20px; 
+}
+
+.form-control:focus {
+    border-color: var(--second-color);
+    outline: none;
+}
+
+/* Style for the general box */
+.post-content .container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for the response box */
+.response-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for the quiz box */
+.quiz-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+/* Style for the quiz form */
+.quiz-form {
+    background-color: #f5f5f5; /* Background color for the form */
+    padding: 20px; /* Add some padding to the form */
+    border-radius: 5px; /* Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+/* Style for the question text */
+.quiz-form p {
+    font-size: 1.2rem; /* Font size for the question */
+    margin-bottom: 10px; /* Margin below each question */
+}
+
+/* Style for the radio buttons and labels */
+.form-group .radio-label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.form-group input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+.quiz-form label {
+    font-size: 1rem; /* Font size for the labels */
+}
+
+/* Style for the submit button */
+.quiz-form button[type="button"] {
+    padding: 10px 20px; /* Button padding */
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Hover effect for the submit button */
+.quiz-form button[type="button"]:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Style the submit button */
+.login {
+    padding: 14px 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+.login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+
+
+
+
+/***************** Responsive ************/
+@media(max-width: 1060px){
+    .container{
+        margin: 0 auto;
+        width: 95%;
+    }
+    .home-text{
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    .nav{
+    padding: 14px 0;
+    }
+    .post-container{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+@media(max-width: 768px){
+    .post-header{
+        height: 390px;
+    }
+
+    .header-title{
+        width: 100%;
+    }
+
+    .header-img{
+        height: 340px;
+    }
+
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control{
+        margin-bottom: 10px; 
+    }
+
+
+    /* Adjust the styles for smaller screens as needed */
+
+
+    .footer{
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+
+
+
+@media(max-width: 396px){
+    .home-title{
+        font-size: 2rem;
+    }
+    .home-subtitle{
+        font-size: 0.9rem;
+    }
+    .home{
+        min-height: 300px;
+    }
+    .post-box{
+        padding: 10px;
+    }
+    .header-title{
+        font-size: 1.4rem;
+    }
+    .header-img{
+        height: 240px;
+    }
+    .post-header{
+        height: 335px;
+    }
+    .post-content{
+        margin-top: 50rem !important;
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Further reduce font size for smaller screens */
+        margin-bottom: 5px; 
+    }
+    .header{
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+    
+
+
+    /* Adjust the styles for smaller screens as needed */
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-color: #030034;
+    --second-color: #26d7ff;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+a{
+
+    text-decoration: none;
+    
+}
+.underline-link {
+    text-decoration: underline;
+    color: rgb(0, 0, 160);
+  }
+
+.underline-link:hover{
+
+    color: purple;
+}
+
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+/*****************Header***********/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.3s;
+}
+
+header.shadow .logo{
+    color: var(--text-color);
+}
+
+.nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+
+}
+
+.logo span{
+   color: var(--second-color);
+}
+
+.login{
+    padding: 8p 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.login:hover{
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text{
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.home-title{
+    font-size: 3.5rem;
+}
+
+.home-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/**************post-filter************/
+.post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem !important;
+}
+
+.filter-item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.active-filter{
+    background: var(--second-color);
+    color: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.post-box{
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-date{
+    display:flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer p{
+   font-size: 0.938rem; 
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.social .bx:hover{
+    color: var(--second-color);
+    transition: 0.3s all linear;
+}
+
+
+/******************* Post Content ************/
+.post-header{
+    width: 100%;
+    height: 500px;
+    background: var(--container-color);
+}
+
+.post-container{
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem !important;
+}
+
+.back-home{
+    color: var(--second-color);
+    font-size: 0.9rem; 
+}
+
+.header-title{
+    width: 90%;
+    font-size: 2.6rem;
+    color: var(--bg-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post-content{
+    margin-top: 10rem !important;
+}
+
+.sub-heading{
+    font-size: 1.2rem;
+}
+
+.post-text{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: auto;
+    /* row-gap: 4rem; */
+    text-align: justify;
+}
+
+.post-text p {
+    margin-bottom: 2rem; /* Adjust this value to increase or decrease the space between paragraphs */
+}
+
+
+.share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.share-title{
+    font-size: 1.1rem;
+}
+
+.post-sources{
+    margin-top: 10rem !important;
+}
+
+
+/*******************************form section**********************************/
+
+
+.form-header-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0px; /* Remove default margin */
+    padding-top: 20px; /* Add top padding */
+}
+
+.form-header-description {
+    margin-top: 20px; /* Remove default margin */
+
+    margin-bottom: 30px; /* Add bottom margin */
+}
+.name-group {
+    display: flex;
+    gap: 10px; /* Adjust the gap between first and last name as needed */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.age-group, .gender-group {
+    flex: 1;
+}
+
+
+/* Set equal width for first and last name fields */
+.name-group .form-group {
+    flex: 1;
+    
+}
+
+/* Adjust the individual input fields */
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 20px; 
+}
+
+.form-control:focus {
+    border-color: var(--second-color);
+    outline: none;
+}
+
+/* Style for the general box */
+.post-content .container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for the response box */
+.response-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for the quiz box */
+.quiz-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+/* Style for the quiz form */
+.quiz-form {
+    background-color: #f5f5f5; /* Background color for the form */
+    padding: 20px; /* Add some padding to the form */
+    border-radius: 5px; /* Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+/* Style for the question text */
+.quiz-form p {
+    font-size: 1.2rem; /* Font size for the question */
+    margin-bottom: 10px; /* Margin below each question */
+}
+
+/* Style for the radio buttons and labels */
+.form-group .radio-label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.form-group input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+.quiz-form label {
+    font-size: 1rem; /* Font size for the labels */
+}
+
+/* Style for the submit button */
+.quiz-form button[type="button"] {
+    padding: 10px 20px; /* Button padding */
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Hover effect for the submit button */
+.quiz-form button[type="button"]:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Style the submit button */
+.login {
+    padding: 14px 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+.login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+
+
+
+
+/***************** Responsive ************/
+@media(max-width: 1060px){
+    .container{
+        margin: 0 auto;
+        width: 95%;
+    }
+    .home-text{
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    .nav{
+    padding: 14px 0;
+    }
+    .post-container{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+@media(max-width: 768px){
+    .post-header{
+        height: 390px;
+    }
+
+    .header-title{
+        width: 100%;
+    }
+
+    .header-img{
+        height: 340px;
+    }
+
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control{
+        margin-bottom: 10px; 
+    }
+
+
+    /* Adjust the styles for smaller screens as needed */
+
+
+    .footer{
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+
+
+
+@media(max-width: 396px){
+    .home-title{
+        font-size: 2rem;
+    }
+    .home-subtitle{
+        font-size: 0.9rem;
+    }
+    .home{
+        min-height: 300px;
+    }
+    .post-box{
+        padding: 10px;
+    }
+    .header-title{
+        font-size: 1.4rem;
+    }
+    .header-img{
+        height: 240px;
+    }
+    .post-header{
+        height: 335px;
+    }
+    .post-content{
+        margin-top: 50rem !important;
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Further reduce font size for smaller screens */
+        margin-bottom: 5px; 
+    }
+    .header{
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+    
+
+
+    /* Adjust the styles for smaller screens as needed */
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> c84ff84904cd0ef1a6cb571022ce0be3424bae30
